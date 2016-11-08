@@ -22,7 +22,7 @@ export default class SearchBar extends Component {
         }
         return (
             <div className="searchbar-section">
-                <p> </p>
+                <p className="title">SEARCH AN ITEM</p>
                 <div className={getClassName()}>
                     <i className="glyphicon glyphicon-search"></i>
                     <input 

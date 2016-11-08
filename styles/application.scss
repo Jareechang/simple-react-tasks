@@ -90,7 +90,19 @@ body {
     @extend .__input-general;
 }
 
+.searchbar-section {
+    margin-top:50px;
+}
+
+.searchbar-section
+.title {
+    font-weight:500;
+    color:#FFF;
+    font-size:15px;
+}
+
 /* style icon */
+.searchbar-section
 .inner-addon  {
     position:relative;
     .glyphicon {
@@ -101,6 +113,7 @@ body {
     }
 }
 
+.searchbar-section
 .right-addon  {
     .glyphicon { 
         right: 10px; 
