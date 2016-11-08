@@ -22,15 +22,9 @@ import SearchBar from './search_bar';
 export default class App extends Component {
     constructor(props) {
         super(props);
-        itemStore.dispatch = this.dispatchChange.bind(this);
         this.state = {
             store: itemStore
         };
-    }
-
-    dispatchChange(newItem) {
-        if(!newItem) return;
-        this.state.store.add(newItem);
     }
 
     render() {
