@@ -36,15 +36,23 @@ export default class Column extends Component {
         let randomKey = () => {
             return `item${Math.random() * 110}`;
         }
+        const alternateClass = (i, className) => {
+            return i % 2 == 0 ? className : `${className}-alt`;
+
+        }
         return this.state.items.map(
-            (item) => {
-                return <div key={randomKey()}>
+            (item, index) => {
+                console.log(index)
+                return <div 
+                            className={alternateClass(index, 'column-item')} 
+                            key={randomKey()}
+                        >
                     <p> 
                         {item.text} 
                         <span 
+                            className={`glyphicon glyphicon-remove ${alternateClass(index, 'glyph-custom')}`}
                             onClick={this.props.store.remove(item.id)}
                         >
-                        x
                         </span>
                     </p>
                 </div>

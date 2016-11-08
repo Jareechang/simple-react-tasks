@@ -125,7 +125,6 @@ body {
         text-align:center;
         font-size:20px;
         color:#FFF;
-        font-weight:200;
     }
 }
 
@@ -140,12 +139,52 @@ body {
     }
     .head-section
     .title {
-        font-size:20px;
+        font-size:16px;
+        letter-spacing: 0.5px;
         color:#FFF;
         padding:10px;
         @include lineargradient(#b5c5d8,#4d596d);
         text-align:center;
     }
+
+    .column-general {
+        padding:15px;
+        font-size:16px;
+    }
+
+    .column-item {
+        background:#f2f3f4;
+        color:#79818f;
+        @extend .column-general;
+    }
+
+    .column-item-alt {
+        background:#bcc0c7;
+        color:#FFF;
+        @extend .column-general;
+    }
+
+    .glyph-general {
+        cursor:pointer;
+        border-radius:5px;
+        float:right;
+        padding:2px;
+    }
+
+    .column-item
+    .glyph-custom {
+        @extend .glyph-general;
+        border:1px solid #7c8391;
+        color:#7c8391;
+    }
+
+    .column-item-alt
+    .glyph-custom-alt {
+        @extend .glyph-general;
+        border:1px solid #FFF;
+        color:#FFF;
+    }
+
 }
 
 .main-container
