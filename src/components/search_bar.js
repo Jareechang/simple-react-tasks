@@ -18,15 +18,21 @@ export default class SearchBar extends Component {
 
     render() {
         const getClassName = () => {
-            return `${this.props.className || ''}`;
+            return `inner-addon right-addon ${this.props.className || ''}`;
         }
         return (
-            <div className={getClassName()}>
-                <input 
-                    type="text"
-                    value={this.state.inputText}
-                    onChange={this.handleTextChange}
-                />
+            <div className="searchbar-section">
+                <p> </p>
+                <div className={getClassName()}>
+                    <i className="glyphicon glyphicon-search"></i>
+                    <input 
+                        className="custom-form-group"
+                        type="text"
+                        placeholder="SEARCH"
+                        value={this.state.inputText}
+                        onChange={this.handleTextChange}
+                    />
+                </div>
             </div>
         )
     }

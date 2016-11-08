@@ -85,15 +85,37 @@ body {
     }
 }
 
+.custom-form-group {
+    color:#d2d4d8;
+    @extend .__input-general;
+}
+
+/* style icon */
+.inner-addon  {
+    position:relative;
+    .glyphicon {
+        color:#FFF;
+        position: absolute;
+        padding: 10px;
+        pointer-events: none;
+    }
+}
+
+.right-addon  {
+    .glyphicon { 
+        right: 10px; 
+        top: 20px;
+    }
+    input { 
+        padding-right: 30px;  
+    }
+}
+
 .main-container
 .main__form-area {
     padding-left:0px;
     @media screen and (max-width: 768px) {
         padding:0px;
-    }
-    .custom-form-group {
-        color:#d2d4d8;
-        @extend .__input-general;
     }
 
     .dropdown-custom {

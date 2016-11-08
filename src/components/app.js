@@ -17,7 +17,6 @@ import TitleSection from './head/title_section';
 import SectionLabel from './body/section_label';
 import FormArea from './body/form_area';
 import Column from './body/column';
-import SearchBar from './search_bar';
 
 export default class App extends Component {
     constructor(props) {
@@ -41,7 +40,6 @@ export default class App extends Component {
                         <FormArea className="col-md-4"/>
                         <Column columnTitle="COLUMN 1" className="col-md-4" />
                         <Column columnTitle="COLUMN 2" className="col-md-4"/>
-                        <SearchBar className="col-md-12"/>
                     </ObserverMiddleWare>
                 </div>
             </div>

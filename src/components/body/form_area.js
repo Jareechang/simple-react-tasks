@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+/* Components */
+import SearchBar from '../search_bar';
+
 export default class FormArea extends Component {
     constructor(props) {
         super(props);
@@ -85,9 +88,7 @@ export default class FormArea extends Component {
                     aria-haspopup="true" 
                     aria-expanded="true"
                 >
-
                 { !! this.state.column ? this.state.column.name : "CHOOSE A COLUMN" }
-
                 <span className="caret pull-right"></span>
               </button>
               <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -101,6 +102,7 @@ export default class FormArea extends Component {
             >
                 ADD ITEM
             </button>
+            <SearchBar store={this.props.store} />
         </div>
     }
 }
