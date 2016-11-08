@@ -40,11 +40,11 @@ export default class FormArea extends Component {
             switch(this.state.column.value) {
                 case "COLUMN_ONE":
                     this.props.store.add({ text: this.state.inputText, 
-                                               column: this.state.column.value });
+                                           column: this.state.column.value });
                     break;
                 case "COLUMN_TWO":
                     this.props.store.add({ text: this.state.inputText, 
-                                                column: this.state.column.value });
+                                           column: this.state.column.value });
                     break;
                 default:
                     console.warn("some options are not selected properly");
