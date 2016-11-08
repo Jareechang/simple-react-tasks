@@ -35,7 +35,11 @@ export default class FormArea extends Component {
                 )
     }
 
-    handleAddItem() {
+    handleAddItem(event) {
+        if(event.key && event.key != 'Enter') {
+            return;
+        }
+
         if(!!this.state.column) {
             switch(this.state.column.value) {
                 case "COLUMN_ONE":
@@ -68,6 +72,7 @@ export default class FormArea extends Component {
                 type="text"
                 className="custom-form-group"
                 placeholder="ENTER ITEM"
+                onKeyDown={this.handleAddItem}
                 value={this.state.inputText}
                 onChange={this.handleTextChange}
             />
