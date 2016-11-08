@@ -19,6 +19,22 @@ body {
         background: linear-gradient($top-color, $bottom-color);
 }
 
+.btn-custom {
+    margin-top:150px;
+    width:100%;
+    padding:15px;
+    border-radius:0;
+    background:transparent;
+    font-size:18px;
+    color: #FFF;
+    border: 2px solid #FFF;
+    &:hover {
+        border: 2px solid #FFF;
+        color: #000;
+        background: #FFF;
+    }
+}
+
 .main-container {
     padding: 75px 125px 75px 125px;
     @media screen and (max-width:1024px) {
@@ -33,10 +49,18 @@ body {
         font-size: 60px;
         color: #FFF;
         font-style: italic;
+
     }
     .main--subtitle {
         color:#8fffee;
         width:360px;
+    }
+    @media screen and (max-width:1024px) {
+        text-align:center;
+        .main--subtitle {
+            margin:auto;
+            width:100%;
+        }
     }
 }
 

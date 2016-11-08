@@ -38,7 +38,7 @@ export default class App extends Component {
                 </div>
                 <div className="content-section">
                     <ObserverMiddleWare store={this.state.store}>
-                        <FormArea store={itemStore} className="col-md-4"/>
+                        <FormArea className="col-md-4"/>
                         <Column columnTitle="COLUMN 1" className="col-md-4" />
                         <Column columnTitle="COLUMN 2" className="col-md-4"/>
                         <SearchBar className="col-md-12"/>

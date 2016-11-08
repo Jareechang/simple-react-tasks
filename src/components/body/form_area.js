@@ -96,10 +96,10 @@ export default class FormArea extends Component {
             </div>  
 
             <button 
-                className="btn btn-default" 
+                className="btn btn-default btn-custom" 
                 onClick={this.handleAddItem}
             >
-                Add Item
+                ADD ITEM
             </button>
         </div>
     }
