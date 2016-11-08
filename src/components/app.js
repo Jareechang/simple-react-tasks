@@ -18,6 +18,43 @@ import SectionLabel from './body/section_label';
 import FormArea from './body/form_area';
 import Column from './body/column';
 
+class MobileOverLay extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            hide: false
+        }
+        this.closeOverlay = this.closeOverlay.bind(this);
+    }
+
+    closeOverlay() {
+        this.setState({
+            hide: true
+        })
+    }
+
+    render() {
+        const removeStyles = {
+            color: '#FFF',
+            margin: '50px',
+            fontSize: '25px'
+        }
+        return <div className={`mobile-overlay ${ this.state.hide ? "hide-overlay" : "" }`}>
+            <div className="pull-right">
+                <i 
+                    className="glyphicon glyphicon-remove" 
+                    style={removeStyles}
+                    onClick={this.closeOverlay}
+                > </i>
+            </div>
+            <div className="container mobile-container">
+                <FormArea {...this.props} className="col-md-12"/>
+            </div>
+        </div>
+    }
+}
+
 export default class App extends Component {
     constructor(props) {
         super(props);
@@ -37,6 +74,7 @@ export default class App extends Component {
                 </div>
                 <div className="content-section">
                     <ObserverMiddleWare store={this.state.store}>
+                        <MobileOverLay />
                         <FormArea className="col-md-4"/>
                         <Column columnTitle="COLUMN 1" className="col-md-4" />
                         <Column columnTitle="COLUMN 2" className="col-md-4"/>

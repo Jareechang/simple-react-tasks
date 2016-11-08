@@ -11,6 +11,30 @@ body {
     background: #79818f;
 }
 
+.mobile-overlay {
+    background:rgb(47, 47, 47);
+    position:fixed;
+    z-index:999;
+    top:0;
+    left:3000px;
+    transition: all 0.25s;
+    height:100%;
+    width:100%;
+    @media screen and (max-width: 480px) {
+        left:0;
+    }
+    .mobile-container {
+        margin:50px;
+    }
+}
+
+.hide-overlay {
+    transition: all 1s;
+    @media screen and (max-width:480px) {
+        left:3000px;
+    }
+}
+
 @mixin lineargradient($top-color, $bottom-color) {
         background:$top-color;
         background: -webkit-linear-gradient($top-color, $bottom-color); /* For Safari 5.1 to 6.0 */
