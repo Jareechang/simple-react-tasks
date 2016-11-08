@@ -50,12 +50,15 @@ export default class FormArea extends Component {
                     console.warn("some options are not selected properly");
                     break;
             }
+            this.setState({ inputText: '' });
         }
     }
 
     renderColumnItems(items) {
         return items.map(item => 
-            <h1 key={item.text}> { item.text } </h1>
+            <h1 key={item.text}> 
+                { item.text } 
+            </h1>
         );
     }
 
