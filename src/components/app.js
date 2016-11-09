@@ -37,7 +37,7 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <NavigationBar toggle={this.toggleOverLay}/>
+                <NavigationBar toggle={this.toggleOverLay} store={this.state.store}/>
                 <div className="container main-container">
                     <div className="col-md-12">
                         <TitleSection />

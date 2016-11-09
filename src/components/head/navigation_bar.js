@@ -9,12 +9,29 @@ export default class NavigationBar extends Component{
             inputText: ''
         }
         this.toggleSearchBar = this.toggleSearchBar.bind(this);
+        this.toggleSearchBarOnEnter = this.toggleSearchBarOnEnter.bind(this);
+        this.handleTextChange = this.handleTextChange.bind(this);
     }
 
     toggleSearchBar() {
         this.setState({
             showSearchBar: ! this.state.showSearchBar
         })
+    }
+
+    toggleSearchBarOnEnter(e) {
+        if(e.key && e.key == 'Enter') {
+            this.setState({
+                showSearchBar: ! this.state.showSearchBar
+            })
+        }
+    }
+
+    handleTextChange(e) {
+        this.setState({
+            inputText: e.target.value
+        });
+        this.props.store.searchText(e.target.value);
     }
 
     render() {
@@ -37,6 +54,8 @@ export default class NavigationBar extends Component{
                     </div>
                     <input 
                         value={this.state.inputValue}
+                        onChange={this.handleTextChange}
+                        onKeyDown={this.toggleSearchBarOnEnter}
                         className={`custom-search hide ${ this.state.showSearchBar ? "show" : "" }`} 
                         type="text" /> 
                 </div>
