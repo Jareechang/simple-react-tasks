@@ -1,7 +1,7 @@
 # React Tasks
 
-A small exercise using React.js using Observer pattern to communicate between
-different components. Additionally, experimenting with mobile UX.
+A small exercise using React.js applying the Observer pattern to communicate 
+between different components. Additionally, experimenting with mobile UX.
 
 ### Demo
 
