@@ -13,6 +13,8 @@ git clone https://github.com/Jareechang/simple-react-tasks  && \
 
 ```
 
+visit [localhost:3000](http://localhost:3000)
+
 ### Demo
 
 ![example](animation.gif)
