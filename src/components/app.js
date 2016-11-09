@@ -52,8 +52,9 @@ export default class App extends Component {
                                 show={this.state.show}
                             />
                             <FormArea showOverLay={this.state.show} className="col-md-4 hidden-xs"/>
-                            <Column columnTitle="COLUMN 1" className="col-md-4" />
-                            <Column columnTitle="COLUMN 2" className="col-md-4"/>
+                            <Column columnTitle="Items" reducer={ data => data } className="col-md-4 visible-xs" />
+                            <Column columnTitle="COLUMN 1" className="col-md-4 hidden-xs" />
+                            <Column columnTitle="COLUMN 2" className="col-md-4 hidden-xs"/>
                         </ObserverMiddleWare>
                     </div>
                 </div>

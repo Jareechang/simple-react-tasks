@@ -84,7 +84,6 @@ export default class FormArea extends Component {
     }
 
     render() {
-        console.log(this.state.showOverLay)
         return <div className={`main__form-area ${this.props.className}`}>
             <input 
                 type="text"

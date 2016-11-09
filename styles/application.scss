@@ -318,14 +318,12 @@ body {
     .column-item
     .glyph-custom {
         @extend .glyph-general;
-        border:1px solid #7c8391;
         color:#7c8391;
     }
 
     .column-item-alt
     .glyph-custom-alt {
         @extend .glyph-general;
-        border:1px solid #FFF;
         color:#FFF;
     }
 

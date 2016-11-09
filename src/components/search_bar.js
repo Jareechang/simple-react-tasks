@@ -5,7 +5,7 @@ export default class SearchBar extends Component {
         super(props);
         this.state = {
             inputText: '',
-            showOverLay: true
+            showOverLay: false
         }
         this.handleTextChange = this.handleTextChange.bind(this);
     }
@@ -24,7 +24,6 @@ export default class SearchBar extends Component {
     }
 
     render() {
-        console.log(this.state.showOverLay)
         const getClassName = () => {
             return `inner-addon right-addon ${this.props.className || ''}`;
         }

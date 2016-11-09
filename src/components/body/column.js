@@ -24,7 +24,9 @@ export default class Column extends Component {
         this.props.registerListener({
             column: column,
             updateState: this.updateState,
-            reducer: (data) => data.column == columnFilter(column)
+            reducer: (this.props.reducer || 
+                        ((data) => data.column == columnFilter(column))
+                     )
         });
     }
 
@@ -38,7 +40,10 @@ export default class Column extends Component {
         }
         const alternateClass = (i, className) => {
             return i % 2 == 0 ? className : `${className}-alt`;
-
+        }
+        const getItemText = (item) => {
+            return this.props.reducer ? 
+                `${item.column}` : '';
         }
         return this.state.items.map(
             (item, index) => {
@@ -46,7 +51,7 @@ export default class Column extends Component {
                             className={alternateClass(index, 'column-item')} 
                             key={randomKey()}
                         >
-                    <p> 
+                    <p style={{fontWeight:'500'}}> 
                         {item.text} 
                         <span 
                             className={`glyphicon glyphicon-remove ${alternateClass(index, 'glyph-custom')}`}
@@ -54,6 +59,7 @@ export default class Column extends Component {
                         >
                         </span>
                     </p>
+                    <p style={{'fontSize': '10px'}}>{getItemText(item).replace('_', ' ').toLowerCase()}</p>
                 </div>
         });
     }
