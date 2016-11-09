@@ -32,7 +32,10 @@ folow methods available in **child component**:
 
 ```javascript
 <ObserverMiddleWare>
-    ...
+    <Child />
+    <Child />
+    <Child />
+      ...
 </ObserverMiddleWare>
 
 ```
