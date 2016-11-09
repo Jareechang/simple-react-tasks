@@ -283,13 +283,14 @@ body {
     @media screen and (max-width:480px) {
         margin-top:20px;
     }
-    padding: 0px 5px;
+    padding: 7px;
+    .column-bg {
+        background:#79818f;
+        height:100%;
+    }
     margin-top:10px;
     background:#FFF;
-    height:500px;
-    .head-section {
-        margin-top:5px;
-    }
+    height:480px;
     .head-section
     .title {
         font-size:16px;

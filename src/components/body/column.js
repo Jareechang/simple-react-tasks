@@ -75,10 +75,12 @@ export default class Column extends Component {
         }
         return (
             <div className={this.getClassName()}>
-                <div className="head-section">
-                    <p className="title"> { getColumnTitle() }</p>
+                <div className="column-bg">
+                    <div className="head-section">
+                        <p className="title"> { getColumnTitle() }</p>
+                    </div>
+                    { this.state.items && this.renderItems() }
                 </div>
-                { this.state.items && this.renderItems() }
             </div>
         )
     }
