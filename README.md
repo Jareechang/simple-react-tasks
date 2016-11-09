@@ -40,3 +40,23 @@ folow methods available in **child component**:
 
 ```
 
+**Store:**  
+
+collection only allows mutations of the main collection in `add` and `remove`
+operations. Other than that, it uses a cloned verions (**collectionClone**) reduced 
+with a `applyFilter` function (and is meant to allow mutations to the function).
+the `applyFilter` returns all collection by default.
+
+```javascript
+itemStore = {
+    ...
+    collectionClone: function() {
+        return _.filter(this.collection, this.applyFilter)
+    }
+    applyFilter: function(item) {
+        return item;
+    },
+
+    ...
+}
+```
