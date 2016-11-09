@@ -7,6 +7,19 @@ p {
     margin-bottom: 0px;
 }
 
+.hidden-xs {
+    @media screen and (max-width:768px) {
+        display:none;
+    }
+}
+
+.visible-xs {
+    display:none;
+    @media (min-width:500px) {
+        display:auto;
+    }
+}
+
 body {
     background: #79818f;
 }
@@ -92,6 +105,7 @@ body {
         width:360px;
     }
     @media screen and (max-width:1024px) {
+        margin-top:50px;
         text-align:center;
         .main--subtitle {
             margin:auto;

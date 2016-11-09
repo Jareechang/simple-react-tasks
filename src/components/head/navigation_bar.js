@@ -1,8 +1,7 @@
-import React from 'React';
+import React from 'react';
 
-const NavBar = (props) => {
-    return (
-        <nav className="navbar navbar-default">
+const NavigationBar = (props) => {
+    return <nav className="navbar navbar-default visible-xs">
             <div className="container-fluid">
                 <div className="navbar-header">
                     <a className="navbar-brand" href="#">
@@ -11,7 +10,6 @@ const NavBar = (props) => {
                 </div>
             </div>
         </nav>
-    )
 }
 
-export default NavBar;
+export default NavigationBar;

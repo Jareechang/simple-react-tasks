@@ -2,7 +2,7 @@ import React from 'react';
 
 const TitleSection = ({ title, subtitle }) => {
     return <div className="main__title-section"> 
-        <p className="main--title"> { title }</p>
+        <p className="main--title hidden-xs"> { title }</p>
         <p className="main--subtitle"> { subtitle }</p>
     </div>
 }
