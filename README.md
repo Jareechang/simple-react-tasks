@@ -16,8 +16,8 @@ this middleware allows child components of this middlware to communicate
 with each other.
 
 folow methods available in **child component**:  
-    - registerListener
-    - emitChangeEvent
+    - registerListener  
+    - emitChangeEvent  
 
 **note:** `registerListener` should have the following format  
 
