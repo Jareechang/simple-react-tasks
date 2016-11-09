@@ -54,10 +54,10 @@ itemStore = {
     ...
     collectionClone: function() {
         return _.filter(this.collection, this.applyFilter)
-    }
+    },
     applyFilter: function(item) {
         return item;
-    },
+    }
 
     ...
 }
