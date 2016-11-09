@@ -9,6 +9,10 @@ const NavigationBar = (props) => {
                     </a>
                     <div className="options pull-right">
                         <span 
+                            className="glyphicon glyphicon-search padding-right-25" 
+                            onClick={props.toggle}
+                        ></span>
+                        <span 
                             className="glyphicon glyphicon-option-vertical" 
                             onClick={props.toggle}
                         ></span>

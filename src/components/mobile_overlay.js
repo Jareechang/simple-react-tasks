@@ -15,21 +15,19 @@ export default class MobileOverLay extends Component {
     }
 
     render() {
-        const removeStyles = {
-            color: '#FFF',
-            margin: '50px',
-            fontSize: '25px'
-        }
         return <div className={`mobile-overlay hide-overlay ${ this.state.show ? "show-overlay" : "" }`}>
             <div className="pull-right">
                 <i 
-                    className="glyphicon glyphicon-remove" 
-                    style={removeStyles}
+                    className="glyphicon glyphicon-remove glyphicon-custom" 
                     onClick={this.props.toggleOverLay}
                 > </i>
             </div>
             <div className="container mobile-container">
-                <FormArea {...this.props} toggleOverLay={this.props.toggleOverLay} className="col-md-12"/>
+                <FormArea {...this.props} 
+                    showOverLay={this.state.show} 
+                    toggleOverLay={this.props.toggleOverLay} 
+                    className="col-md-12"
+                />
             </div>
         </div>
     }

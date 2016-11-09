@@ -24,11 +24,12 @@ export default class SearchBar extends Component {
     }
 
     render() {
+        console.log(this.state.showOverLay)
         const getClassName = () => {
             return `inner-addon right-addon ${this.props.className || ''}`;
         }
         return (
-            <div className={`searchbar-section ${ this.state.showOverLay ? "" : "hide"}`}>
+            <div className={`searchbar-section ${ this.state.showOverLay ? "hide" : ""}`}>
                 <p className="title">SEARCH AN ITEM</p>
                 <div className={getClassName()}>
                     <i className="glyphicon glyphicon-search"></i>

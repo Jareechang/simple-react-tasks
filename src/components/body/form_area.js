@@ -9,7 +9,7 @@ export default class FormArea extends Component {
         this.state = {
             inputText: '',
             column: null,
-            showOverLay: true
+            showOverLay: false
         }
         this.handleTextChange = this.handleTextChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
@@ -69,7 +69,8 @@ export default class FormArea extends Component {
             }
 
             this.setState({ 
-                inputText: ''
+                inputText: '',
+                showOverLay: false 
             });
         }
     }
@@ -83,6 +84,7 @@ export default class FormArea extends Component {
     }
 
     render() {
+        console.log(this.state.showOverLay)
         return <div className={`main__form-area ${this.props.className}`}>
             <input 
                 type="text"
