@@ -42,7 +42,7 @@ folow methods available in **child component**:
 
 **Store:**  
 
-collection only allows mutations of the main collection in `add` and `remove`
+the store only allows mutations of the main collection during `add` and `remove`
 operations. Other than that, it uses a cloned verions (**collectionClone**) reduced 
 with a `applyFilter` function (and is meant to allow mutations to the function).
 the `applyFilter` returns all collection by default.
