@@ -9,6 +9,7 @@ responsive mobile UX trends.
 ```sh
 git clone https://github.com/Jareechang/simple-react-tasks  && \
     cd simple-react-tasks && \
+    npm i && \
     npm run start
 
 ```
