@@ -7,6 +7,12 @@ const NavigationBar = (props) => {
                     <a className="navbar-brand" href="#">
                         <p className="logo-title">Marvelous!</p>
                     </a>
+                    <div className="options pull-right">
+                        <span 
+                            className="glyphicon glyphicon-option-vertical" 
+                            onClick={props.toggle}
+                        ></span>
+                    </div>
                 </div>
             </div>
         </nav>

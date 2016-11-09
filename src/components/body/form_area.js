@@ -39,6 +39,7 @@ export default class FormArea extends Component {
     }
 
     handleAddItem(event) {
+
         if(event.key && event.key != 'Enter') {
             return;
         }
@@ -57,7 +58,13 @@ export default class FormArea extends Component {
                     console.warn("some options are not selected properly");
                     break;
             }
+
+            if(!!this.props.closeOverLay) {
+                this.props.closeOverLay();
+            }
+
             this.setState({ inputText: '' });
+
         }
     }
 

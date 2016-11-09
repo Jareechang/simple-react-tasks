@@ -20,6 +20,15 @@ p {
     }
 }
 
+.options {
+    margin-top:15px;
+    margin-right:25px;
+    .glyphicon {
+        font-size:16px;
+        cursor:pointer;
+    }
+}
+
 body {
     background: #79818f;
 }
@@ -28,16 +37,13 @@ body {
     background:rgb(47, 47, 47);
     position:fixed;
     z-index:999;
-    top:0;
+    top:50px;
     left:3000px;
-    transition: all 0.25s;
+    transition: all 0.8s;
     height:100%;
     width:100%;
-    @media screen and (max-width: 480px) {
-        left:0;
-    }
     .mobile-container {
-        margin:50px;
+        margin:25px 50px;
     }
 }
 
@@ -54,11 +60,18 @@ body {
 }
 
 .hide-overlay {
-    transition: all 1s;
     @media screen and (max-width:480px) {
         left:3000px;
     }
 }
+
+.show-overlay {
+    transition: all 0.8s;
+    @media screen and (max-width:480px) {
+        left:0px;
+    }
+}
+
 
 @mixin lineargradient($top-color, $bottom-color) {
         background:$top-color;
@@ -228,6 +241,9 @@ body {
 .main-container
 .section__label-section {
     margin-top:50px;
+    @media screen and (max-width:480px) {
+        margin-top:20px;
+    }
     .section-label {
         @include lineargradient(#c0c9d4, #8391a4);
         padding:10px 0 10px 0;
@@ -239,6 +255,9 @@ body {
 
 .main-container
 .column-section {
+    @media screen and (max-width:480px) {
+        margin-top:20px;
+    }
     padding: 0px 5px;
     margin-top:10px;
     background:#FFF;

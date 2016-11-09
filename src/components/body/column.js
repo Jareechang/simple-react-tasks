@@ -42,7 +42,6 @@ export default class Column extends Component {
         }
         return this.state.items.map(
             (item, index) => {
-                console.log(index)
                 return <div 
                             className={alternateClass(index, 'column-item')} 
                             key={randomKey()}

@@ -6,14 +6,18 @@ export default class MobileOverLay extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            hide: false
+            show: false 
         }
         this.closeOverlay = this.closeOverlay.bind(this);
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.setState({ show: nextProps.show });
+    }
+
     closeOverlay() {
         this.setState({
-            hide: true
+            show: false
         })
     }
 
@@ -23,7 +27,7 @@ export default class MobileOverLay extends Component {
             margin: '50px',
             fontSize: '25px'
         }
-        return <div className={`mobile-overlay ${ this.state.hide ? "hide-overlay" : "" }`}>
+        return <div className={`mobile-overlay hide-overlay ${ this.state.show ? "show-overlay" : "" }`}>
             <div className="pull-right">
                 <i 
                     className="glyphicon glyphicon-remove" 
@@ -32,7 +36,7 @@ export default class MobileOverLay extends Component {
                 > </i>
             </div>
             <div className="container mobile-container">
-                <FormArea {...this.props} className="col-md-12"/>
+                <FormArea {...this.props} closeOverLay={this.closeOverlay} className="col-md-12"/>
             </div>
         </div>
     }

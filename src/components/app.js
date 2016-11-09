@@ -18,19 +18,26 @@ import TitleSection from './head/title_section';
 import SectionLabel from './body/section_label';
 import FormArea from './body/form_area';
 import Column from './body/column';
+import MobileOverLay from './mobile_overlay';
 
 export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            store: itemStore
+            store: itemStore,
+            show: false
         };
+        this.toggleOverLay = this.toggleOverLay.bind(this);
+    }
+
+    toggleOverLay() {
+        this.setState({ show: !this.state.show })
     }
 
     render() {
         return (
             <div>
-                <NavigationBar/>
+                <NavigationBar toggle={this.toggleOverLay}/>
                 <div className="container main-container">
                     <div className="col-md-12">
                         <TitleSection />
@@ -40,6 +47,7 @@ export default class App extends Component {
                     </div>
                     <div className="content-section">
                         <ObserverMiddleWare store={this.state.store}>
+                            <MobileOverLay show={this.state.show}/>
                             <FormArea className="col-md-4 hidden-xs"/>
                             <Column columnTitle="COLUMN 1" className="col-md-4" />
                             <Column columnTitle="COLUMN 2" className="col-md-4"/>
