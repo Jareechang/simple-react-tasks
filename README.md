@@ -4,6 +4,15 @@ A small exercise using React.js applying the Observer pattern to communicate
 between different components. Additionally, experimenting with some of the latest 
 responsive mobile UX trends.
 
+### Running locally
+
+```sh
+git clone https://github.com/Jareechang/simple-react-tasks  && \
+    cd simple-react-tasks && \
+    npm run start
+
+```
+
 ### Demo
 
 ![example](animation.gif)
