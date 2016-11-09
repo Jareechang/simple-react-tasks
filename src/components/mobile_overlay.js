@@ -8,17 +8,10 @@ export default class MobileOverLay extends Component {
         this.state = {
             show: false 
         }
-        this.closeOverlay = this.closeOverlay.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
         this.setState({ show: nextProps.show });
-    }
-
-    closeOverlay() {
-        this.setState({
-            show: false
-        })
     }
 
     render() {
@@ -32,11 +25,11 @@ export default class MobileOverLay extends Component {
                 <i 
                     className="glyphicon glyphicon-remove" 
                     style={removeStyles}
-                    onClick={this.closeOverlay}
+                    onClick={this.props.toggleOverLay}
                 > </i>
             </div>
             <div className="container mobile-container">
-                <FormArea {...this.props} closeOverLay={this.closeOverlay} className="col-md-12"/>
+                <FormArea {...this.props} toggleOverLay={this.props.toggleOverLay} className="col-md-12"/>
             </div>
         </div>
     }

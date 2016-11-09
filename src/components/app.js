@@ -31,7 +31,7 @@ export default class App extends Component {
     }
 
     toggleOverLay() {
-        this.setState({ show: !this.state.show })
+        this.setState({ show: ! this.state.show })
     }
 
     render() {
@@ -47,7 +47,10 @@ export default class App extends Component {
                     </div>
                     <div className="content-section">
                         <ObserverMiddleWare store={this.state.store}>
-                            <MobileOverLay show={this.state.show}/>
+                            <MobileOverLay 
+                                toggleOverLay={this.toggleOverLay} 
+                                show={this.state.show}
+                            />
                             <FormArea showOverLay={this.state.show} className="col-md-4 hidden-xs"/>
                             <Column columnTitle="COLUMN 1" className="col-md-4" />
                             <Column columnTitle="COLUMN 2" className="col-md-4"/>

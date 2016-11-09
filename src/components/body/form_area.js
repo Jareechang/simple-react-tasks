@@ -9,7 +9,7 @@ export default class FormArea extends Component {
         this.state = {
             inputText: '',
             column: null,
-            showSearchBar: true
+            showOverLay: true
         }
         this.handleTextChange = this.handleTextChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
@@ -18,7 +18,7 @@ export default class FormArea extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({ showSearchBar: !nextProps.showOverLay })
+        this.setState({ showOverLay: nextProps.showOverLay });
     }
 
     handleTextChange(e) {
@@ -31,7 +31,7 @@ export default class FormArea extends Component {
         return () => {
             this.setState({
                 column: option
-            })
+            });
         }
     }
 
@@ -40,7 +40,7 @@ export default class FormArea extends Component {
                 { name: 'Column 2', value: 'COLUMN_TWO'}]
                 .map(option => 
                     <li key={option.value} className="option" onClick={this.handleClick(option)}>{option.name}</li> 
-                )
+                );
     }
 
     handleAddItem(event) {
@@ -64,12 +64,13 @@ export default class FormArea extends Component {
                     break;
             }
 
-            if(!!this.props.closeOverLay) {
-                this.props.closeOverLay();
+            if(!!this.props.toggleOverLay) {
+                this.props.toggleOverLay();
             }
 
-            this.setState({ inputText: '' });
-
+            this.setState({ 
+                inputText: ''
+            });
         }
     }
 
@@ -114,7 +115,7 @@ export default class FormArea extends Component {
             >
                 ADD ITEM
             </button>
-            <SearchBar store={this.props.store} className={this.state.showSearchBar ? "" : "hidden-xs"}/>
+            <SearchBar store={this.props.store} showOverLay={this.state.showOverLay}/>
         </div>
     }
 }
