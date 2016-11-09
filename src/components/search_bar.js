@@ -20,8 +20,9 @@ export default class SearchBar extends Component {
         const getClassName = () => {
             return `inner-addon right-addon ${this.props.className || ''}`;
         }
+        console.log(this.props.className)
         return (
-            <div className="searchbar-section">
+            <div className={"searchbar-section " + (this.props.className)}>
                 <p className="title">SEARCH AN ITEM</p>
                 <div className={getClassName()}>
                     <i className="glyphicon glyphicon-search"></i>

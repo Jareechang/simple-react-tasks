@@ -8,12 +8,17 @@ export default class FormArea extends Component {
         super(props);
         this.state = {
             inputText: '',
-            column: null
+            column: null,
+            showSearchBar: true
         }
         this.handleTextChange = this.handleTextChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleAddItem = this.handleAddItem.bind(this);
         this.renderColumnItems = this.renderColumnItems.bind(this);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({ showSearchBar: !nextProps.showOverLay })
     }
 
     handleTextChange(e) {
@@ -109,7 +114,7 @@ export default class FormArea extends Component {
             >
                 ADD ITEM
             </button>
-            <SearchBar store={this.props.store} />
+            <SearchBar store={this.props.store} className={this.state.showSearchBar ? "" : "hidden-xs"}/>
         </div>
     }
 }

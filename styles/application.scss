@@ -95,6 +95,9 @@ body {
         color: #000;
         background: #FFF;
     }
+    @media screen and (max-width:480px) {
+        margin-top:30px;
+    }
 }
 
 .main-container {
