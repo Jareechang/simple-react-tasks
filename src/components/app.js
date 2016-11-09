@@ -13,6 +13,7 @@ import ObserverMiddleWare from '../middleware/observer_middleware';
 import itemStore from '../stores/item_store';
 
 /* Components */
+import NavBar from './head/navbar';
 import TitleSection from './head/title_section';
 import SectionLabel from './body/section_label';
 import FormArea from './body/form_area';
@@ -65,6 +66,8 @@ export default class App extends Component {
 
     render() {
         return (
+            <div>
+                <NavBar/>
             <div className="container main-container">
                 <div className="col-md-12">
                     <TitleSection />
@@ -81,6 +84,7 @@ export default class App extends Component {
                     </ObserverMiddleWare>
                 </div>
             </div>
+                </div>
         );
     }
 }
