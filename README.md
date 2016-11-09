@@ -37,8 +37,9 @@ the following methods (or store) are available in **child component**:
 
 ```javascript
 {
-    column: string,    // the column to insert into
-    reducer: function  // reduce function to be applied to the cloned collection
+         column: string,    // the column to insert into
+    updateState: function,  // update state function for the target component
+        reducer: function   // reduce function to be applied to the cloned collection
 }
 ```
 
